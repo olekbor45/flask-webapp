@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>CFR - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-water"></i>CFR</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('cfr')">COST AND FREIGHT</h2> <div onclick="openTab('cfr')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CFR-Incoterm.jpg" alt="Incoterm CFR" width="800" height="403" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CFR-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CFR-Incoterm-300x118.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Cost and Freight (CFR) is an Incoterm used for sea or inland waterway transport, where the seller pays for the transport of goods to the destination port, but the risk transfers to the buyer once the goods are on board the vessel.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller covers export clearance and freight costs to the destination port.</p>
+            <p>2.Buyer takes on risk once goods are loaded onto the ship.</p>
+            <p>3.Buyer handles unloading, import clearance, duties, and insurance.</p>
+            <p>4.Like FOB, but with the seller also paying for the freight.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

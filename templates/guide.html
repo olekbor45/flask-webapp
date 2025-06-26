@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="max-width: 700px; margin: 50px auto; padding: 30px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h1 style="text-align: center; color: #2c3e50;"><i class="fas fa-compass"></i> Inco Guide</h1>
+    
+    <form method="POST" action="/guide" style="display: flex; flex-direction: column; gap: 15px;">
+        <label>Cargo Type:
+            <select name="cargo_type">
+                <option value="dry bulk">Dry Bulk</option>
+                <option value="liquid bulk">Liquid Bulk</option>
+                <option value="containerized">Containerized</option>
+                <option value="project">Project</option>
+                <option value="breakbulk">Breakbulk Cargo</option>
+            </select>
+        </label>
+
+        <label>Mode of Transport:
+            <select name="transport_mode">
+                <option value="air">Air</option>
+                <option value="sea">Sea</option>
+                <option value="rail">Rail</option>
+                <option value="road">Road</option>
+                <option value="multimodal">Multimodal</option>
+            </select>
+        </label>
+
+        <label>Distance/Region:
+            <select name="region">
+                <option value="domestic">Domestic</option>
+                <option value="international">International</option>
+            </select>
+        </label>
+
+        <label>Are you the buyer or seller?
+            <select name="role">
+                <option value="seller">Seller (Exporter)</option>
+                <option value="buyer">Buyer (Importer)</option>
+            </select>
+        </label>
+
+        <label>How much responsibility do you want to take?
+            <select name="responsibility_level">
+                <option value="minimal">Minimal</option>
+                <option value="shared">Shared responsibilities</option>
+                <option value="maximal">Maximal</option>
+            </select>
+        </label>
+
+        <label>Do you want to provide insurance?
+            <select name="insurance">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="unsure">Not sure</option>
+            </select>
+        </label>
+
+        <label>Who will handle import customs and duties?
+            <select name="import_clearance">
+                <option value="seller">The seller</option>
+                <option value="buyer">The buyer</option>
+                <option value="unsure">Not sure</option>
+            </select>
+        </label>
+
+        <label>Preferred Delivery Point:
+            <select name="delivery_point">
+                <option value="origin_premises">Seller’s property</option>
+                <option value="port_of_shipment">Port of shipment</option>
+                <option value="port_of_arrival">Port of arrival</option>
+                <option value="destination_premises">Buyer’s property</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+
+        <label>Experience Level:
+            <select name="experience_level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Some experience</option>
+                <option value="expert">Expert</option>
+            </select>
+        </label>
+
+        <input type="submit" value="Submit" style="background-color: #2c3e50; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+    </form>
+
+    {% if result %}
+    <div style="margin-top: 25px;">
+        <h3 style="text-align: center;">Submission Received:</h3>
+        <ul style="line-height: 2.0;">
+            <li><strong>Cargo Type:</strong> {{result.cargo_type }}</li>
+            <li><strong>Transport Mode:</strong> {{ result.transport_mode }}</li>
+            <li><strong>Region:</strong> {{ result.region}}</li>
+            <li><strong>Role:</strong> {{result.role}}</li>
+            <li><strong>Responsibility Level:</strong> {{ result.responsibility_level}}</li>
+            <li><strong>Insurance:</strong> {{result.insurance}}</li>
+            <li><strong>Import Clearance:</strong> {{result.import_clearance }}</li>
+            <li><strong>Delivery Point:</strong> {{ result.delivery_point }}</li>
+            <li><strong>Experience Level:</strong> {{ result.experience_level }}</li>
+        </ul>
+
+        {% if result.recommendation %}
+        <div style="margin-top: 20px; padding: 15px; background-color: #e0f7da; border-left: 6px solid #2e7d32;">
+            <strong>Our Recommended Incoterm:</strong>
+            <a href="{{ url_for('incoterm', term=result.recommendation) }}" style="color: #2e7d32;">
+                {{ result.recommendation }}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+

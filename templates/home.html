@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="max-width: 900px; margin: 50px auto; padding: 30px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h1 style="text-align: center; color: #2c3e50; font-size: 3em; margin-bottom: 20px;">
+        <i class="fas fa-globe"></i> IncoGuide
+    </h1>
+
+    <section style="text-align: center;">
+        <h2 style="color: #34495e;">Overview of Incoterms</h2>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 1.1em; color: #555;">
+            When exporting or importing, it is crucial to choose an appropriate Incoterm. Although Incoterms may seem complex, selecting the correct one is a foundational decision that dictates the responsibilities, costs, and risks divided between the seller and the buyer.
+        </p>
+    </section>
+
+    <div class="project-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+        <div class="project" style="width: 200px; text-align: center;">
+            <img src="https://t4.ftcdn.net/jpg/05/06/48/67/360_F_506486779_5VJ9imVv8Vi0fGoTAebSvxAJxubewktB.jpg" alt="Category E" width="150" height="150">
+            <h3>Category E</h3>
+            <p>The buyer bears responsibility (EXW). The seller must ensure the goods arrive at the agreed delivery address.</p>
+        </div>
+
+        <div class="project" style="width: 200px; text-align: center;">
+            <img src="https://img.freepik.com/premium-vector/agreement-contract-deal-icon-black-vector-design_922357-21614.jpg" alt="Category F" width="150" height="150">
+            <h3>Category F</h3> <!--Info about categories from ChatGPT-->
+            <p>The seller arranges delivery. The buyer assumes responsibility afterward.</p>
+        </div>
+
+        <div class="project" style="width: 200px; text-align: center;">
+                <img id="dimg_k4knaN7NDeqC9u8PxpfOsQ4_199" src="data:image/png;base64,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" height="150" width="150">
+            <h3>Category C</h3>
+            <p>The seller pays until goods arrive. Risk shifts to buyer during onward transport.</p>
+        </div>
+
+        <div class="project" style="width: 200px; text-align: center;">
+            <img src="https://thumbs.dreamstime.com/b/line-art-black-white-signpost-popular-tourist-destination-pointer-travel-themed-vector-illustration-icon-logo-label-emblem-186953742.jpg" alt="Category D" width="150" height="150">
+            <h3>Category D</h3>
+            <p>All obligations are tied to the destination agreed upon by the parties.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

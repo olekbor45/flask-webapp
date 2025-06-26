@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>DDP - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-file-invoice-dollar"></i>DDP</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('ddp')">DELIVERED DUTY PAID</h2> <div onclick="openTab('ddp')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DDP-Incoterm.jpg" alt="Incoterm DDP" width="800" height="420" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DDP-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DDP-Incoterm-300x123.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Delivered Duty Paid (DDP) is the Incoterm with the maximum responsibility on the seller, who delivers the goods to a named destination fully cleared for import, with all duties and taxes paid.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller handles everything: transport, export and import clearance, and all duties/taxes.</p>
+            <p>2.Risk transfers to buyer only when goods are delivered, ready for unloading.</p>
+            <p>3.Buyer just receives the goods—minimal involvement.</p>
+            <p>4.Ideal for buyers wanting a simple, hassle-free delivery.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

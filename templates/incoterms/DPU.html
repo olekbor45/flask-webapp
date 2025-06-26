@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>DPU - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-truck-loading"></i>DPU</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('dpu')">DELIVERED AT PLACE UNLOADED</h2> <div onclick="openTab('dpu')" style="cursor: pointer;">
+            <img clas="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DPU-Incoterm.jpg" alt="Incoterm DPU" width="800" height="426" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DPU-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DPU-Incoterm-300x125.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">  
+            </div>
+            <p>Delivered at Place Unloaded (DPU) is an Incoterm where the seller delivers the goods, unloaded, at a named place of destination. It’s the only Incoterm that requires the seller to unload the goods at the destination.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller handles transport and unloading at the named place.</p>
+            <p>2.Risk transfers to buyer after unloading.</p>
+            <p>3.Seller clears goods for export, but buyer handles import clearance and duties.</p>
+            <p>4.Suitable for deliveries to terminals, warehouses, or specific sites where unloading is needed.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

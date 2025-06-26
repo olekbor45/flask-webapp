@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>FCA - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-warehouse"></i>FCA</h1>
+    <section>
+ <div class="separator"></div><h2 class="clickable" onclick="openTab('fca')">FREE CARRIER</h2> <div onclick="openTab('fca')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FCA-Incoterm.jpg" alt="Incotermy FCA" width="800" height="550" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FCA-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FCA-Incoterm-300x213.jpg 300w" sizes="(max-width: 800px) 100vw, 800px">
+            </div>
+            <p>Free Carrier (FCA) is an Incoterm where the seller delivers the goods to a carrier or another party nominated by the buyer at a named place (often a terminal, port, or transport hub). Once delivered, the risk and cost transfer to the buyer.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller is responsible for export clearance and delivery to the agreed handover point.</p>
+            <p>2.Buyer handles transport from that point onward, including insurance and import duties.</p>
+            <p>3.Can be used for any mode of transport.</p>
+            <p>4.Offers more flexibility than EXW and is often preferred for containerized shipping.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

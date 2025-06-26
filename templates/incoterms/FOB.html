@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>FOB - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-ship"></i>FOB</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('fob')">FREE ON BOARD</h2> <div onclick="openTab('fob')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FOB-Incoterm.jpg" alt="Incoterm FOB" width="800" height="440" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FOB-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FOB-Incoterm-300x129.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Free on Board (FOB) is an Incoterm used for sea or inland waterway transport, where the seller delivers the goods on board the vessel at the named port of shipment. Once the goods are on board, risk and cost transfer to the buyer.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller handles export clearance and loading onto the ship.</p>
+            <p>2.Buyer takes over once goods are on board, covering main transport, insurance, and import formalities.</p>
+            <p>3.Suitable for bulk cargo and conventional shipping, not containerized freight (for containers, FCA is preferred).</p>
+    </section>
+</body>
+{% endblock %}
+</html>

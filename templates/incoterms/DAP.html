@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>DAP - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-map-marker-alt"></i>DAP</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('dap')">DELIVERED AT PLACE</h2> <div onclick="openTab('dap')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DAP-Incoterm.jpg" alt="Incoterm DAP" width="800" height="413" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DAP-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/DAP-Incoterm-300x121.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">  
+            </div>
+            <p>Delivered at Place (DAP) is an Incoterm where the seller delivers the goods to a named destination, ready for unloading, and the buyer takes on the risk and cost from that point onward, including import duties and taxes.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller handles all transport and risk up to the named place of delivery (usually buyer’s location or a terminal).</p>
+            <p>2.Risk transfers to buyer upon arrival, before unloading.</p>
+            <p>3.Seller takes care of export clearance, but buyer is responsible for import clearance and duties.</p>
+            <p>4.Suitable for most transport modes.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

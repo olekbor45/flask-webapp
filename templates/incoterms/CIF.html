@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CIF - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-life-ring"></i>CIF</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('cif')">COST, INSURANCE AND FREIGHT</h2> <div onclick="openTab('cif')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIF-Incoterm.jpg" alt="Incoterm CIF" width="800" height="459" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIF-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIF-Incoterm-300x134.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Cost, Insurance and Freight (CIF) is an Incoterm used for sea or inland waterway transport, where the seller delivers goods on board the vessel, pays for the transport and minimum insurance to the destination port, but risk transfers to the buyer once the goods are on board.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller covers export clearance, freight, and insurance.</p>
+            <p>2.Buyer assumes risk from the moment goods are loaded on the ship.</p>
+            <p>3.Buyer handles unloading, import duties, and any extra insurance.</p>
+            <p>4.Like CFR, but with the added obligation for the seller to insure the goods.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

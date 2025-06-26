@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IncoGuide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Source of the stylesheet for icons = ChatGPT-->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    
+    <nav>
+        <a href="/"><i class="fas fa-home"></i> Home</a>
+        <a href="/guide"><i class="fas fa-compass"></i> Inco Guide</a>
+        <a href="/incoterm/EXW"><i class="fas fa-box-open"></i> EXW</a>
+        <a href="/incoterm/FCA"><i class="fas fa-warehouse"></i> FCA</a>
+        <a href="/incoterm/CPT"><i class="fas fa-shipping-fast"></i> CPT</a>
+        <a href="/incoterm/CIP"><i class="fas fa-shield-alt"></i> CIP</a>
+        <a href="/incoterm/DAP"><i class="fas fa-map-marker-alt"></i> DAP</a>
+        <a href="/incoterm/DPU"><i class="fas fa-truck-loading"></i> DPU</a>
+        <a href="/incoterm/DDP"><i class="fas fa-file-invoice-dollar"></i> DDP</a>
+        <a href="/incoterm/FAS"><i class="fas fa-anchor"></i> FAS</a>
+        <a href="/incoterm/FOB"><i class="fas fa-ship"></i> FOB</a>
+        <a href="/incoterm/CFR"><i class="fas fa-water"></i> CFR</a>
+        <a href="/incoterm/CIF"><i class="fas fa-life-ring"></i> CIF</a>
+    </nav>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
+

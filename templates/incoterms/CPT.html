@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CPT - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-shipping-fast"></i> CPT</h1>
+    <section>
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CPT-Incoterm.jpg" alt="Incoterm CPT" width="800" height="459" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CPT-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CPT-Incoterm-300x134.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Carriage Paid To (CPT) is an Incoterm where the seller arranges and pays for the transport of goods to a named destination, but risk transfers to the buyer once the goods are handed over to the first carrier.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller pays for main transport to the agreed destination.</p>
+            <p>2.Buyer assumes risk once goods are handed to the carrier.</p>
+            <p>3.Seller is also responsible for export clearance.</p>
+            <p>4.Import duties, taxes, and insurance are buyer’s responsibility.</p>
+            <p>It’s useful when the seller has better access to shipping arrangements but the buyer wants to manage risk or insurance themselves.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

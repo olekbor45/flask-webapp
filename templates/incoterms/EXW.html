@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>EXW - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-box-open"></i>EXW</h1>
+    <section>
+<div class="separator"></div><h2 class="clickable" onclick="openTab('exw')">EX-WORKS</h2> <div onclick="openTab('exw')" style="cursor: pointer;">
+            <img  class="center clickable"  src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/Ex-Works-Incoterm.jpg" alt="Ex Works Incoterm" width="800" height="429" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/Ex-Works-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/Ex-Works-Incoterm-300x126.jpg 300w" sizes="(max-width: 800px) 100vw, 800px">
+            </div>
+            <p>Ex Works (EXW) is one of the Incoterms (International Commercial Terms) used in international trade. Under EXW, the seller makes the goods available at their premises or another named place (factory, warehouse, etc.), and the buyer is responsible for all costs and risks involved in transporting the goods from that location to the final destination.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller's responsibility ends once the goods are made available.</p>
+            <p>2.Buyer handles everything else: loading, transport, export/import clearance, insurance, etc</p>
+            <p>3.It gives the least obligation to the seller.</p>
+            <p>It's commonly used when the buyer has more logistics capabilities or prefers to manage the shipping process themselves.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

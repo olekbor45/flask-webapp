@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>FAS - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-anchor"></i>FAS</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('fas')">FREE ALONGSIDE SHIP</h2> <div onclick="openTab('fas')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FAS-Incoterm.jpg" alt="Incoterm FAS" width="800" height="414" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FAS-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/FAS-Incoterm-300x121.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            </div>
+            <p>Free Alongside Ship (FAS) is an Incoterm used exclusively for sea or inland waterway transport, where the seller delivers the goods alongside the vessel at a named port (e.g., on a quay or barge), and the buyer takes over from that point.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller is responsible for export clearance and delivery up to the ship’s side at the port.</p>
+            <p>2.Risk and cost transfer to the buyer once goods are placed alongside the vessel.</p>
+            <p>3.Buyer handles loading onto the ship, main transport, insurance, and all import formalities.</p>
+            <p>4.Commonly used for bulk or non-containerized cargo.</p>
+    </section>
+</body>
+{% endblock %}
+</html>

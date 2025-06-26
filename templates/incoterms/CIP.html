@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CIP - IncoGuide</title>
+</head>
+<body>
+    <h1><i class="fas fa-shield-alt"></i>CIP</h1>
+    <section>
+            <div class="separator"></div><h2 class="clickable" onclick="openTab('cip')">CARRIAGE AND INSURANCE PAID TO</h2> <div onclick="openTab('cip')" style="cursor: pointer;">
+            <img class="center clickable" src="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIP-Incoterm.jpg" alt="Incoterm CIP" width="800" height="438" srcset="https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIP-Incoterm.jpg 1024w, https://www.international-arbitration-attorney.com/wp-content/uploads/2020/06/CIP-Incoterm-300x128.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+            <p>Carriage and Insurance Paid To (CIP) is an Incoterm where the seller delivers the goods to a carrier, pays for the transport to a named destination, and also pays for insurance covering the buyer’s risk during transit.</p> <!--Info about incoterm from ChatGPT-->
+            <h3>Key Points:</h3>
+            <p>1.Seller covers transport and minimum insurance to the named destination.</p>
+            <p>2.Risk transfers to buyer when goods are handed over to the first carrier.</p>
+            <p>3.Seller handles export clearance.</p>
+            <p>4.Buyer is responsible for import duties and additional insurance if needed.</p>
+            <p>CIP is similar to CPT but adds the seller’s obligation to insure the goods.</p>
+            </div>
+    </section>
+</body>
+{% endblock %}
+</html>
